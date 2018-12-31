@@ -1,0 +1,16 @@
+syntax = "proto3";
+package foo;
+
+
+import "bar/baz.proto";
+
+service Foo {
+  rpc Ping(PingReq) returns (PingRes);
+}
+
+message PingReq {
+  baz.Baz baz = 1;
+}
+
+message PingRes {
+}
